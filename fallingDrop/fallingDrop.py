@@ -1,18 +1,19 @@
 import matplotlib.pyplot as plt
 
-x = [0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6]
+x = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
 
 # Pseudo Verlet Lists
-psvl_c18 = [24.3842, 23.3172, 21.6622, 23.2634, 23.7578, 23.4836, 23.9618, 24.2872]
-psvl_c08 = [22.5864, 21.2348, 19.967, 21.193, 21.1404, 21.6702, 21.4314, 21.9812]
+psvl_c18 = [83.21,   73.6482, 76.914,  85.4738, 87.4154, 94.0144]
+psvl_c08 = [65.874,  55.4186, 54.3382, 58.4594, 58.5614, 61.1774]
 
 # Linked Cells
-lc_c18 = [21.3930, 20.1450, 21.7204, 21.6402, 22.0760, 22.2656, 22.3926, 22.9328]
-lc_c08 = [19.2756, 18.2512, 18.4524, 18.4916, 18.7570, 18.8200, 18.9570, 19.1828]
+lc_c18   = [66.8906, 69.1436, 77.0866, 86.258,  89.405,  95.997]
+lc_c08   = [43.2818, 44.9372, 47.7644, 52.5008, 53.5476, 56.8968]
 
 # Verlet Linked Cells
-vlc_c18 = [21.0224, 18.7702, 19.1558, 19.1908, 19.7364, 19.5808, 19.6618, 19.4530]
-vlc_c08 = [19.8156, 18.7858, 18.6218, 18.7154, 19.0912, 19.7220, 18.8606, 18.1100]
+vlc_c18  = [62.8658, 62.1164, 67.0644, 73.7366, 78.5444, 84.9708]
+vlc_c08  = [37.8664, 36.6082, 38.0538, 40.5698, 42.8364, 45.3556]
+
 
 
 blue_light   = '#aec7e8'   # PSVL c18
@@ -40,16 +41,16 @@ plt.plot(x, vlc_c08, marker='v', linestyle='--', color=orange_dark, label='VLC -
 plt.xlabel('skin size factor')
 plt.ylabel('Wall-clock time [s]')
 
-plt.ylim(18, 26)
+plt.ylim(35, 100)
 
 plt.legend(
-    loc='upper right',
+    loc='upper left',
     ncol=3
 )
 
 plt.grid(True)
 plt.tight_layout()
 
-plt.savefig("exploding_traversals_avg.pdf", format="pdf", bbox_inches="tight")
+plt.savefig("falling_traversals_avg.pdf", format="pdf", bbox_inches="tight")
 
 plt.show()
