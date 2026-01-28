@@ -19,10 +19,10 @@
           0
         </DataArray>
         <DataArray type="Int32" Name="Traversal" format="ascii">
-          35
+          33
         </DataArray>
         <DataArray type="Int32" Name="Newton3" format="ascii">
-          0
+          1
         </DataArray>
         <DataArray type="Int32" Name="Rank" format="ascii">
           0
