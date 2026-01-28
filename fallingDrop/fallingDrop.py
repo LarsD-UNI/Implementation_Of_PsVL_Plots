@@ -67,7 +67,6 @@ plt.savefig("wall_clock_avg.pdf", bbox_inches="tight")
 plt.show()
 plt.close()
 
-
 # =======================
 # 2) REBUILD FREQUENCY
 # =======================
@@ -83,7 +82,6 @@ plt.tight_layout()
 plt.savefig("rebuild_frequency_avg.pdf", bbox_inches="tight")
 plt.show()
 plt.close()
-
 
 # =======================
 # 3) UPDATE CONTAINER
