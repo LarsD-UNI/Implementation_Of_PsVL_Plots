@@ -68,14 +68,14 @@ plot_single_metric_ms(
     "0.3",
     "compute",
     "computeInteractions [ms]",
-    "computeInteractions_0p3_ms.pdf"
+    "computeInteractions_0.3.pdf"
 )
 
 plot_single_metric_ms(
     "0.3",
     "rebuild",
     "rebuildNeighborLists [ms]",
-    "rebuildNeighborLists_0p3_ms.pdf"
+    "rebuildNeighborLists_0.3.pdf"
 )
 
 # skin = 0.6
@@ -83,12 +83,12 @@ plot_single_metric_ms(
     "0.6",
     "compute",
     "computeInteractions [ms]",
-    "computeInteractions_0p6_ms.pdf"
+    "computeInteractions_0.6.pdf"
 )
 
 plot_single_metric_ms(
     "0.6",
     "rebuild",
     "rebuildNeighborLists [ms]",
-    "rebuildNeighborLists_0p6_ms.pdf"
+    "rebuildNeighborLists_0.6.pdf"
 )

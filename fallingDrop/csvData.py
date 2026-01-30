@@ -49,7 +49,7 @@ def plot_single_metric_ms(skin, metric, ylabel, filename):
 plot_single_metric_ms(
     "0.3", "compute",
     "computeInteractions [ms]",
-    "computeInteractions_0p3.pdf"
+    "computeInteractions_0.3.pdf"
 )
 
 plot_single_metric_ms(
