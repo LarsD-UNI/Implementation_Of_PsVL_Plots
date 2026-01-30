@@ -21,7 +21,7 @@ export OMP_PROC_BIND=close
 
 EXEC="$HOME/Projekte/AutoPas/build/examples/md-flexible/md-flexible"
 YAML1="fallingDrop_psvl_c08.yaml"
-YAML1="fallingDrop_vlc_c08.yaml"
+YAML2="fallingDrop_vlc_c08.yaml"
 
 for radius in 0.3 0.7; do
 

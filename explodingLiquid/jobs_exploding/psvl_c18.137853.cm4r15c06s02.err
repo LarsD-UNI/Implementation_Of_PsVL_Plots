@@ -1,0 +1,13 @@
+Notice: No version specified. Loading the default version: 'cmake/3.30.0-gcc13'.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  CLIParser::inputFilesPresent: Yaml-File YAML not found!
+/var/slurmd-cm4/job137853/slurm_script: line 30: 162314 Aborted                 (core dumped) $EXEC --yaml-filename "$1YAML" --verlet-skin-radius "$radius"
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  CLIParser::inputFilesPresent: Yaml-File YAML not found!
+/var/slurmd-cm4/job137853/slurm_script: line 30: 162320 Aborted                 (core dumped) $EXEC --yaml-filename "$2YAML" --verlet-skin-radius "$radius"
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  CLIParser::inputFilesPresent: Yaml-File YAML not found!
+/var/slurmd-cm4/job137853/slurm_script: line 30: 162332 Aborted                 (core dumped) $EXEC --yaml-filename "$1YAML" --verlet-skin-radius "$radius"
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  CLIParser::inputFilesPresent: Yaml-File YAML not found!
+/var/slurmd-cm4/job137853/slurm_script: line 30: 162342 Aborted                 (core dumped) $EXEC --yaml-filename "$2YAML" --verlet-skin-radius "$radius"
