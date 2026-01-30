@@ -17,6 +17,9 @@ lc_wc_c18   = [65.7108, 69.1258, 76.4106, 86.8684, 89.0082, 95.8990, 111.3898, 1
 vlc_wc_c08  = [37.8294, 36.5728, 37.5444, 39.7174, 41.2034, 45.3984, 47.0802, 49.2474, 52.7188, 53.9024]
 vlc_wc_c18  = [47.3290, 48.5554, 52.3718, 59.5804, 61.8190, 67.1890, 76.5174, 81.8248, 89.4128, 92.3218]
 
+psvl_wc_c01 = [60.6960, 48.6068, 44.4932, 43.0442, 42.6560, 42.9692, 43.1982, 44.2160, 45.3586, 45.5238]
+lc_wc_c01   = [45.2418, 44.9316, 46.1432, 45.6468, 46.3730, 47.3460, 48.3974, 49.5256, 50.0160, 51.5604]
+
 # =======================
 # REBUILD FREQUENCY — AVG
 # =======================
@@ -113,5 +116,21 @@ plt.grid(True)
 plt.legend()
 plt.tight_layout()
 plt.savefig("force_update_avg.pdf", bbox_inches="tight")
+plt.show()
+plt.close()
+
+# =======================
+# c01
+# =======================
+plt.figure(figsize=(6, 4))
+plt.plot(x, psvl_wc_c01, marker='o', label='PSVL - c01', color=blue_dark)
+plt.plot(x, lc_wc_c01,   marker='s', linestyle='--', label='LC - c01', color=green_dark)
+
+plt.xlabel("skin size factor")
+plt.ylabel("Wall-clock time [s]")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.savefig("c01_avg.pdf", bbox_inches="tight")
 plt.show()
 plt.close()
