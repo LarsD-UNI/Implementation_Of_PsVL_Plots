@@ -34,7 +34,7 @@ def plot_single_metric_ms(skin, metric, ylabel, filename):
     plt.bar(labels, values_ms, color=[blue_dark, orange_dark])
 
     plt.ylabel(ylabel)
-    plt.title(f"{metric} (skin size factor = {skin})")
+    #plt.title(f"{metric} (skin size factor = {skin})")
     plt.grid(axis="y")
     plt.tight_layout()
     plt.savefig(filename, bbox_inches="tight")
