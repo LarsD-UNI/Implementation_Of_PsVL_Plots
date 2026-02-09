@@ -51,8 +51,11 @@ def plot_single_metric_ms(skin, metric, ylabel, filename):
     plt.figure(figsize=(4.5, 4))
     plt.bar(labels, values_ms, color=[blue_dark, orange_dark])
 
+    plt.ylabel(ylabel, fontsize=15)
+    plt.xticks(fontsize=15)
+    plt.yticks(fontsize=15)
+
     plt.ylabel(ylabel)
-    plt.title(f"{metric} (skin size factor = {skin})")
     plt.grid(axis="y")
     plt.tight_layout()
     plt.savefig(filename, bbox_inches="tight")

@@ -70,7 +70,6 @@ def insert_particle_into_cell(particle: Particle, cells):
 # Core logic
 # ----------------------------
 def build_cells(particleCount: int, seed: int = 42):
-    """Generate ONE particle configuration and insert into 3x3x3 cells."""
     random.seed(seed)
     cells = [[] for _ in range(NUM_CELLS)]
 
@@ -135,26 +134,24 @@ def calculatePsVL_from_cells(cells, r_s: float) -> float:
     return 1.0 - (particleSpurious / particleInteractions)
 
 # ----------------------------
-# Plot (thesis-quality)
+# Plot
 # ----------------------------
 particleCount = 2000
-cells_fixed = build_cells(particleCount, seed=3)
+cells_fixed = build_cells(particleCount, seed=35)
 
-r_s_values = np.linspace(0, 0.5 * r_c, 200)
+r_s_values = np.linspace(0, 0.6 * r_c, 200)
 
 verlet_values = [calculateVerlet(r_s) for r_s in r_s_values]
 psvl_values = [calculatePsVL_from_cells(cells_fixed, r_s) for r_s in r_s_values]
 
-# NEW: create figure with size + dpi
-fig, ax = plt.subplots(figsize=(6.5, 4.0), dpi=200)  # ~ thesis-friendly size
+fig, ax = plt.subplots(figsize=(6.5, 4.0), dpi=200)
 
 ax.plot(r_s_values / r_c, verlet_values, label="Verlet list", linewidth=2)
-ax.plot(r_s_values / r_c, psvl_values, label="Pseudo-Verlet lists",
-        linestyle="--", linewidth=2)
+ax.plot(r_s_values / r_c, psvl_values, label="Pseudo-Verlet lists", linewidth=2)
 
 ax.set_xlabel(r"$r_s / r_c$", fontsize=12)
 ax.set_ylabel(r"Ratio of pairs within $r_c$", fontsize=12)
-ax.set_xlim(0, 0.5)
+ax.set_xlim(0, 0.6)
 ax.set_ylim(0, 1)
 
 ax.tick_params(labelsize=11)
@@ -163,9 +160,7 @@ ax.legend(fontsize=11)
 
 fig.tight_layout()
 
-# NEW: export high-quality
-fig.savefig("psvl_vs_verlet.pdf", bbox_inches="tight")     # best for thesis
-fig.savefig("psvl_vs_verlet.png", dpi=300, bbox_inches="tight")  # if you need PNG
+fig.savefig("psvl_vs_verlet.pdf", bbox_inches="tight")
 
 plt.show()
 
