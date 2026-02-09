@@ -137,7 +137,7 @@ def calculatePsVL_from_cells(cells, r_s: float) -> float:
 # Plot
 # ----------------------------
 particleCount = 2000
-cells_fixed = build_cells(particleCount, seed=35)
+cells_fixed = build_cells(particleCount, seed=3)
 
 r_s_values = np.linspace(0, 0.6 * r_c, 200)
 
