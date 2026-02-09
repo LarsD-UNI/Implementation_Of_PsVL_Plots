@@ -12,11 +12,11 @@ tuning-strategies                :  [predictive-tuning]
 tuning-interval                  :  2500
 tuning-samples                   :  3
 functor                          :  Lennard-Jones AVX
-cutoff                           :  3
+cutoff                           :  1
 box-min                          :  [0, 0, 0]
 box-max                          :  [8, 8, 8]
 cell-size                        :  [1]
-deltaT                           :  0.0005
+deltaT                           :  0
 iterations                       :  50000
 energy-sensor                    :  rapl
 boundary-type                    :  [none, none, none]

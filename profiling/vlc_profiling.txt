@@ -1,32 +1,32 @@
-Elapsed Time: 94.921s
-    Allocation Size: 12,5 GB 
-    Deallocation Size: 12,5 GB 
-    Allocations: 12,130,252
+Elapsed Time: 166.193s
+    Allocation Size: 27.6 GB 
+    Deallocation Size: 27.6 GB 
+    Allocations: 13,215,978
     Total Thread Count: 112
     Paused Time: 0s
 
 Top Memory-Consuming Functions
-Function                                                                             Memory Consumption  Allocation/Deallocation Delta  Allocations  Module     
------------------------------------------------------------------------------------  ------------------  -----------------------------  -----------  -----------
-autopas::AutoPas<mdLib::MoleculeLJ>::begin                                                      7,3 GB                          0,0 B     8,100,003  md-flexible
-[Unknown]                                                                                       3,0 GB                          0,0 B     3,117,050  [Unknown]  
-autopas::VerletListsLinkedBase<mdLib::MoleculeLJ>::VerletListsLinkedBase                        1,5 GB                          0,0 B        50,001  md-flexible
-autopas::LinkedCells<mdLib::MoleculeLJ>::updateContainer._omp_fn.0                            463,8 MB                          0,0 B        23,462  md-flexible
-autopas::VLCAllCellsNeighborList<mdLib::MoleculeLJ>::buildAoSNeighborList._omp_fn.0            86,1 MB                          0,0 B        14,098  md-flexible
-[Others]                                                                                      245,2 MB                       145,9 KB       825,638  N/A        
+Function                                                                                                            Memory Consumption  Allocation/Deallocation Delta  Allocations  Module     
+------------------------------------------------------------------------------------------------------------------  ------------------  -----------------------------  -----------  -----------
+autopas::VerletListsLinkedBase<mdLib::MoleculeLJ>::VerletListsLinkedBase                                                      11.9 GB                          0.0 B        50,001  md-flexible
+autopas::AutoPas<mdLib::MoleculeLJ>::begin                                                                                     7.1 GB                          0.0 B     7,900,001  md-flexible
+[Unknown]                                                                                                                      4.6 GB                          0.0 B     3,619,132  [Unknown]  
+autopas::LinkedCells<mdLib::MoleculeLJ>::updateContainer._omp_fn.0                                                             3.8 GB                          0.0 B       193,649  md-flexible
+autopas::LeavingParticleCollector::collectParticlesAndMarkNonOwnedAsDummy<autopas::LinkedCells<mdLib::MoleculeLJ>>            74.1 MB                          0.0 B        48,780  md-flexible
+[Others]                                                                                                                     241.4 MB                       145.9 KB     1,404,415  N/A        
 Collection and Platform Info
-    Application Command Line: /dss/dsshome1/0A/ge87lup2/Projekte/AutoPas/build/examples/md-flexible/md-flexible "--yaml-filename" "uniform_box_length_vlc_10.yaml" "--verlet-skin-radius" "0.6" 
+    Application Command Line: /dss/dsshome1/0A/ge87lup2/Projekte/AutoPas/build/examples/md-flexible/md-flexible "--yaml-filename" "uniform_box_length_vlc_20.yaml" "--verlet-skin-radius" "0.1" 
     Operating System: 6.4.0-150600.23.25-default NAME="SLES" VERSION="15-SP6" VERSION_ID="15.6" PRETTY_NAME="SUSE Linux Enterprise Server 15 SP6" ID="sles" ID_LIKE="suse" ANSI_COLOR="0;32" CPE_NAME="cpe:/o:suse:sles:15:sp6" DOCUMENTATION_URL="https://documentation.suse.com/"
-    Computer Name: cm4r13c02s03
-    Result Size: 1,2 GB 
-    Collection start time: 11:50:36 07/02/2026 UTC
-    Collection stop time: 11:52:12 07/02/2026 UTC
+    Computer Name: cm4r13c03s03
+    Result Size: 1.4 GB 
+    Collection start time: 13:14:30 09/02/2026 UTC
+    Collection stop time: 13:17:18 09/02/2026 UTC
     Collector Type: User-mode sampling and tracing
     CPU
         Name: Intel(R) Xeon(R) Processor code named Sapphirerapids
         Frequency: 2.000 GHz
         Logical CPU Count: 224
-        LLC size: 110,1 MB 
+        LLC size: 110.1 MB 
         Cache Allocation Technology
             Level 2 capability: available
             Level 3 capability: available

@@ -9,7 +9,7 @@
 #SBATCH --partition=cm4_tiny
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=112
-#SBATCH --time=01:30:00
+#SBATCH --time=01:00:00
 
 module load slurm_setup
 module load cmake
@@ -22,7 +22,7 @@ export OMP_PROC_BIND=close
 EXEC="$HOME/Projekte/AutoPas/build/examples/md-flexible/md-flexible"
 YAML="uniform_box_length_08.yaml"
 
-for radius in 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0; do
+for radius in 1.0; do
 
   echo "Radius: $radius"
 

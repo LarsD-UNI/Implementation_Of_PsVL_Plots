@@ -9,7 +9,7 @@
 #SBATCH --partition=cm4_tiny
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=112
-#SBATCH --time=01:30:00
+#SBATCH --time=03:30:00
 
 module load slurm_setup
 module load cmake
