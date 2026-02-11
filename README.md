@@ -6,7 +6,8 @@
 ##  Project Overview
 This repository provides:
 
-- All measurement data used in the evaluation  
+- All measurement data used
+- All Jobscripts and .yaml files used
 - Python scripts for data processing and visualization  
 - Generated plots included in the thesis  
 
