@@ -9,7 +9,7 @@
 #SBATCH --partition=cm4_tiny
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=112
-#SBATCH --time=00:10:00
+#SBATCH --time=00:05:00
 
 module load slurm_setup
 module load cmake
@@ -25,7 +25,7 @@ YAML2="uniform_box_length_vlc_20.yaml"
 
 RESULT_DIR="$SLURM_SUBMIT_DIR/vtune_${SLURM_JOB_ID}"
 
-for radius in 0.1; do
+for radius in 0.7; do
 
   echo "Radius: $radius"
 
