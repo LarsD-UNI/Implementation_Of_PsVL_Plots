@@ -1,14 +1,9 @@
 import matplotlib.pyplot as plt
 
-# =======================
-# Farben
-# =======================
-blue_dark   = '#1f77b4'   # PSVL
-orange_dark = '#ff7f0e'   # VLC
+# Colors
+blue_dark   = '#1f77b4'
+orange_dark = '#ff7f0e'
 
-# =======================
-# Daten (ns)
-# =======================
 data_ns = {
     "0.3": {
         "PSVL": {
@@ -32,15 +27,9 @@ data_ns = {
     },
 }
 
-# =======================
-# Umrechnung
-# =======================
 def ns_to_ms(ns):
     return ns / 1_000_000  # nicht runden!
 
-# =======================
-# Plot-Funktion
-# =======================
 def plot_single_metric_ms(skin, metric, ylabel, filename):
     labels = ["PSVL", "VLC"]
     values_ms = [
@@ -62,36 +51,30 @@ def plot_single_metric_ms(skin, metric, ylabel, filename):
     plt.show()
     plt.close()
 
-# =======================
-# 4 Diagramme
-# =======================
-
-# skin = 0.3
 plot_single_metric_ms(
     "0.3",
     "compute",
-    "computeInteractions [ms]",
+    "computeInteractions (ms)",
     "computeInteractions_0.3.pdf"
 )
 
 plot_single_metric_ms(
     "0.3",
     "rebuild",
-    "rebuildNeighborLists [ms]",
+    "rebuildNeighborLists (ms)",
     "rebuildNeighborLists_0.3.pdf"
 )
 
-# skin = 0.6
 plot_single_metric_ms(
     "0.6",
     "compute",
-    "computeInteractions [ms]",
+    "computeInteractions (ms)",
     "computeInteractions_0.6.pdf"
 )
 
 plot_single_metric_ms(
     "0.6",
     "rebuild",
-    "rebuildNeighborLists [ms]",
+    "rebuildNeighborLists (ms)",
     "rebuildNeighborLists_0.6.pdf"
 )

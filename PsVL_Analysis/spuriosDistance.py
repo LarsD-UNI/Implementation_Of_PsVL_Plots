@@ -3,9 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-# ----------------------------
-# Data structures
-# ----------------------------
 class Particle:
     __slots__ = ("x", "y", "z")
 
@@ -15,18 +12,11 @@ class Particle:
         self.z = z
 
 
-# ----------------------------
-# Parameters
-# ----------------------------
 r_c = 1.0
 CELLS_PER_DIM = 3
 NUM_CELLS = CELLS_PER_DIM ** 3
-CENTER_CELL_INDEX = 13  # (1,1,1)
+CENTER_CELL_INDEX = 13
 
-
-# ----------------------------
-# Helpers
-# ----------------------------
 def calculateVerlet(r_s: float) -> float:
     return (r_c ** 3) / ((r_c + r_s) ** 3)
 
@@ -44,16 +34,13 @@ def normalize(vec):
     return [x / length, y / length, z / length]
 
 def one_to_three_d(ind: int):
-    # dims fixed: 3x3x3
     d0, d1 = 3, 3
     z = ind // (d0 * d1)
     y = (ind - z * d0 * d1) // d0
     x = ind - d0 * (y + d1 * z)
-    # offsets in {-1,0,1}
     return [x - 1, y - 1, z - 1]
 
 def insert_particle_into_cell(particle: Particle, cells):
-    # coords in [0, 3*r_c] -> floor gives 0..3, clamp to 0..2
     cx = math.floor(particle.x / r_c)
     cy = math.floor(particle.y / r_c)
     cz = math.floor(particle.z / r_c)
@@ -62,13 +49,9 @@ def insert_particle_into_cell(particle: Particle, cells):
     cy = min(max(cy, 0), 2)
     cz = min(max(cz, 0), 2)
 
-    cell_index = (cz * 3 + cy) * 3 + cx  # 0..26
+    cell_index = (cz * 3 + cy) * 3 + cx
     cells[cell_index].append(particle)
 
-
-# ----------------------------
-# Core logic
-# ----------------------------
 def build_cells(particleCount: int, seed: int = 42):
     random.seed(seed)
     cells = [[] for _ in range(NUM_CELLS)]
@@ -99,7 +82,7 @@ def evalPsvl(cells, neighborIndex, r_s):
     interactions = 0
     spurious = 0
 
-    direction = normalize(one_to_three_d(neighborIndex))  # unit vector from cell-offset
+    direction = normalize(one_to_three_d(neighborIndex))
 
     for p_center in cells[CENTER_CELL_INDEX]:
         dCenter = direction[0] * p_center.x + direction[1] * p_center.y + direction[2] * p_center.z
@@ -107,7 +90,6 @@ def evalPsvl(cells, neighborIndex, r_s):
         for p_neighbor in cells[neighborIndex]:
             dNeighbor = direction[0] * p_neighbor.x + direction[1] * p_neighbor.y + direction[2] * p_neighbor.z
 
-            # Candidate by pseudo-Verlet projection rule
             if abs(dCenter - dNeighbor) < (r_c + r_s):
                 interactions += 1
                 if distance(p_center, p_neighbor) > r_c:
@@ -133,9 +115,6 @@ def calculatePsVL_from_cells(cells, r_s: float) -> float:
 
     return 1.0 - (particleSpurious / particleInteractions)
 
-# ----------------------------
-# Plot
-# ----------------------------
 particleCount = 2000
 cells_fixed = build_cells(particleCount, seed=3)
 

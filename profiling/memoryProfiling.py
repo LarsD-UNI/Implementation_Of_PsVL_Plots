@@ -4,12 +4,9 @@ blue_dark   = '#1f77b4'
 orange_dark = '#ff7f0e'
 gray_base   = '#b0b0b0'
 
-# =======================
-# Data (GB)
-# =======================
 data_gb = {
-    "PSVL": {"container": 2.8, "linkedbase": 1.5},
-    "VLC":  {"container": 3.0, "linkedbase": 1.5},
+    "PSVL": {"container": 21-8.0, "linkedbase": 8.0},
+    "VLC":  {"container": 20.6-8.0, "linkedbase": 8.0},
 }
 
 def plot_stacked_memory(filename):
@@ -40,12 +37,12 @@ def plot_stacked_memory(filename):
         color=[blue_dark, orange_dark]
     )
 
-    # Dummy-Handles für Legende
     psvl_handle = plt.Rectangle((0, 0), 1, 1, color=blue_dark)
     vlc_handle  = plt.Rectangle((0, 0), 1, 1, color=orange_dark)
 
-    plt.ylabel("Memory [GB]")
-    plt.title("Memory usage (stacked)")
+    plt.ylabel("memory (GB)", fontsize=15)
+    plt.xticks(fontsize=15)
+    plt.yticks(fontsize=15)
     plt.grid(axis="y")
 
     max_total = max(
@@ -66,6 +63,8 @@ def plot_stacked_memory(filename):
 
     plt.tight_layout()
     plt.savefig(filename, bbox_inches="tight")
+    plt.xticks(fontsize=15)
+    plt.yticks(fontsize=15)
     plt.show()
     plt.close()
 
