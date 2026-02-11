@@ -27,7 +27,7 @@ YAML2="uniform_box_length_vlc_20.yaml"
 
 RESULT_DIR="$SLURM_SUBMIT_DIR/vtune_${SLURM_JOB_ID}"
 
-for radius in 0.1; do
+for radius in 0.7; do
 
   echo "Radius: $radius"
 

@@ -1,26 +1,26 @@
-Elapsed Time: 122.720s
-    Allocation Size: 29.0 GB 
-    Deallocation Size: 29.0 GB 
-    Allocations: 16,460,298
-    Total Thread Count: 112
+Elapsed Time: 196.889s
+    Allocation Size: 21.0 GB 
+    Deallocation Size: 21.0 GB 
+    Allocations: 17,723,931
+    Total Thread Count: 113
     Paused Time: 0s
 
 Top Memory-Consuming Functions
 Function                                                                  Memory Consumption  Allocation/Deallocation Delta  Allocations  Module     
 ------------------------------------------------------------------------  ------------------  -----------------------------  -----------  -----------
-autopas::VerletListsLinkedBase<mdLib::MoleculeLJ>::VerletListsLinkedBase            11.9 GB                          0.0 B        50,001  md-flexible
-autopas::AutoPas<mdLib::MoleculeLJ>::begin                                           6.9 GB                          0.0 B     7,706,829  md-flexible
-[Unknown]                                                                            4.8 GB                          0.0 B     3,577,220  [Unknown]  
-autopas::LinkedCells<mdLib::MoleculeLJ>::updateContainer._omp_fn.0                   3.9 GB                          0.0 B       198,896  md-flexible
-autopas::PseudoVerletLists<mdLib::MoleculeLJ>::rebuildNeighborLists                  1.3 GB                          0.0 B     3,215,361  md-flexible
-[Others]                                                                           368.3 MB                       145.6 KB     1,711,991  N/A        
+autopas::VerletListsLinkedBase<mdLib::MoleculeLJ>::VerletListsLinkedBase             8.0 GB                          0.0 B        50,001  md-flexible
+autopas::AutoPas<mdLib::MoleculeLJ>::begin                                           7.0 GB                          0.0 B     7,809,168  md-flexible
+[Unknown]                                                                            3.5 GB                          0.0 B     3,417,031  [Unknown]  
+autopas::LinkedCells<mdLib::MoleculeLJ>::updateContainer._omp_fn.0                   1.3 GB                          0.0 B        66,967  md-flexible
+autopas::Configuration::getCSVRepresentation[abi:cxx11]                            396.8 MB                          0.0 B     1,450,030  md-flexible
+[Others]                                                                           864.9 MB                         3.5 MB     4,930,734  N/A        
 Collection and Platform Info
-    Application Command Line: /dss/dsshome1/0A/ge87lup2/Projekte/AutoPas/build/examples/md-flexible/md-flexible "--yaml-filename" "uniform_box_length_20.yaml" "--verlet-skin-radius" "0.1" 
+    Application Command Line: /dss/dsshome1/0A/ge87lup2/Projekte/AutoPas/build/examples/md-flexible/md-flexible "--yaml-filename" "uniform_box_length_20.yaml" "--verlet-skin-radius" "0.7" 
     Operating System: 6.4.0-150600.23.25-default NAME="SLES" VERSION="15-SP6" VERSION_ID="15.6" PRETTY_NAME="SUSE Linux Enterprise Server 15 SP6" ID="sles" ID_LIKE="suse" ANSI_COLOR="0;32" CPE_NAME="cpe:/o:suse:sles:15:sp6" DOCUMENTATION_URL="https://documentation.suse.com/"
-    Computer Name: cm4r13c03s03
-    Result Size: 1.9 GB 
-    Collection start time: 13:02:37 09/02/2026 UTC
-    Collection stop time: 13:04:41 09/02/2026 UTC
+    Computer Name: cm4r15c01s04
+    Result Size: 2.2 GB 
+    Collection start time: 08:54:46 11/02/2026 UTC
+    Collection stop time: 08:58:04 11/02/2026 UTC
     Collector Type: User-mode sampling and tracing
     CPU
         Name: Intel(R) Xeon(R) Processor code named Sapphirerapids
